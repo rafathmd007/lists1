@@ -1,0 +1,62 @@
+
+body{
+	
+	font-family: Tahoma;
+    font-size: 24px;
+    direction: rtl;
+}
+
+ header h2
+{
+
+    text-align: center;
+    
+}
+
+.menu > ol {
+	
+	    margin-top: 50px;
+   
+    float: right;
+    background: burlywood;
+    height: 100%;
+         padding: 0 0 0 40px;
+}
+.menu ol li{
+	font-size: 0.5em;
+	margin-top: 15px;
+	}
+	.menu ol li a{
+		text-decoration: none;
+		color: black;
+	}
+
+.menu ol{
+	counter-reset: section;
+	 list-style-type: none;
+	 position: absolute;
+	
+}
+.menu li::before{
+	 counter-increment: section;
+ content: counters(section,".")
+" ";
+}
+.menu .inMenu li::before{
+	counter-increment: none;
+	content: " ";
+}
+.inMenu{
+	    margin-right: 83px;
+    width: 60px;
+    margin-top: -29px;
+      background: burlywood;
+      display: none;
+    
+}
+.menu >ol >li:hover ol{
+	display: block;
+}
+.typeStyleMenu{
+	list-style-type: upper-roman !important;
+}
